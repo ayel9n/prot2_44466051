@@ -1,0 +1,442 @@
+/* Estilos generales */
+body {
+  background-color: #D9D9D9; /* Color de fondo general de la página */
+  font-family: "Open Sauce One", sans-serif; /* Fuente personalizada para todo el sitio */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar con diseño refinado */
+.navbar {
+  background-color: #faf9f6 !important; /* Color de fondo claro para la barra de navegación */
+  padding: 1px 10px; /* Espaciado interior reducido */
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  justify-content: space-between; /* Separa el logo del menú de navegación */
+  margin-bottom: 0 !important; /* Elimina el margen inferior */
+  border-bottom: none !important; /* Quita el borde inferior */
+  box-shadow: none !important; /* Sin sombra en la navbar */
+}
+
+.navbar-light {
+  border-bottom: none !important; /* Refuerza la eliminación del borde */
+  box-shadow: none !important; /* Refuerza la eliminación de la sombra */
+}
+
+/* Logo en la navbar */
+.logo-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo */
+}
+
+/* Aumentar tamaño del logo en la navbar */
+.navbar .navbar-logo {
+  height: 85px !important;
+  width: auto !important;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Enlaces de navegación */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Alinea los enlaces al extremo derecho */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Espaciado entre enlaces */
+}
+
+.navbar-nav .nav-link {
+  color: #1e1e1e !important; /* Color del texto */
+  font-weight: bold; /* Negrita */
+  font-size: 18px; /* Tamaño de fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  transition: color 0.3s ease-in-out; /* Transición suave al hacer hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important; /* Color amarillo al pasar el mouse */
+}
+
+/* Estilos para el buscador */
+.form-control::placeholder {
+  color: rgba(30, 30, 30, 0.6); /* Color del placeholder semi-transparente */
+}
+
+/* Botón visible y estilizado */
+.btn-custom-search {
+  background-color: #1e1e1e;  /* Fondo oscuro */
+  color: #ffffff;             /* Texto blanco */
+  border: 1px solid #1e1e1e;  /* Borde igual al fondo */
+}
+
+.btn-custom-search:hover {
+  background-color: #ffcc00;  /* Fondo amarillo al hacer hover */
+  border-color: #ffcc00;      /* Borde amarillo */
+  color: #333;                /* Texto oscuro */
+}
+
+.btn-search-compact {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  line-height: 1;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Botón de colapso (navbar responsive) */
+.navbar-toggler {
+  border: none; /* Elimina el borde del botón */
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Invierte los colores del icono para mayor visibilidad */
+}
+
+/* Contenedor del carrusel */
+.carousel {
+  max-width: 150%; /* Permite que el carrusel sobresalga del ancho */
+  margin: 0 auto; /* Centra horizontalmente */
+  height: 600px; /* Altura fija */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ajustar altura de las imágenes del carrusel */
+.carousel-item img {
+  height: 100%; /* Ocupa todo el alto del carrusel */
+  width: 100%;
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+}
+
+/* Transición suave al cambiar de slide */
+.carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Tamaño reducido de botones prev/next del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+}
+
+/* Estilo de los puntos indicadores del carrusel */
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+}
+
+
+/* Eliminar márgenes del contenedor principal */
+.container-fluid,
+main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.precio-oferta {
+  color: #e67e22; /* Naranja moderno */
+  font-weight: bold;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: relative; /* O eliminar 'position' directamente */
+}
+
+/* Sección de productos destacados */
+.destacados {
+  display: flex;
+  gap: 20px; /* Espacio entre los productos */
+  justify-content: center; /* Centrado horizontal */
+  flex-wrap: wrap; /* Permite que se acomoden en múltiples filas si no entran en una sola */
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+/* Tarjeta de producto */
+.producto {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden; /* Oculta partes de la imagen que se salen del contenedor */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  background-color: #D9D9D9;
+  transition: transform 0.3s ease; /* Suaviza el efecto hover */
+}
+
+.producto:hover {
+  transform: scale(1.02); /* Ligeramente más grande al hacer hover */
+}
+
+/* Imágenes del producto */
+.producto img {
+  position: absolute; /* Posicionamiento superpuesto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta para llenar el espacio sin deformar */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición suave entre imágenes */
+}
+
+/* Imagen que aparece al hacer hover */
+.img-hover {
+  opacity: 0; /* Inicialmente oculta */
+  z-index: 1;
+}
+
+/* Imagen principal visible por defecto */
+.img-principal {
+  z-index: 2;
+}
+
+/* Al pasar el mouse, se muestra la imagen hover */
+.producto:hover .img-hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Y se oculta la imagen principal */
+.producto:hover .img-principal {
+  opacity: 0;
+}
+
+/* Overlay con información del producto */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: #D9D9D9; /* Fondo del overlay */
+  color: #1e1e1e; /* Texto oscuro para contraste */
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  z-index: 3; /* Se asegura de que quede por encima de las imágenes */
+}
+
+/* ------------------ Quienes somos ------------------*/
+/* CSS */
+.quienes-somos-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+.quienes-somos-section p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Acerca de */
+.elaboration-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 100px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #111;
+  gap: 40px;
+}
+
+.elaboration-image {
+  flex: 1 1 45%;
+}
+
+.elaboration-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.elaboration-text {
+  flex: 1 1 50%;
+}
+
+.elaboration-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.elaboration-text h3 {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.elaboration-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.map-container {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ------------------ Registro ------------------*/
+
+/* ESTILOS COMPARTIDOS ENTRE LOGIN Y REGISTRO */
+.form-container {
+  width: 40%;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* FORMULARIO GENERAL */
+form {
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* ETIQUETAS */
+label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* CAMPOS DE TEXTO Y SELECT */
+input.form-control,
+select.form-control {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+input.form-control:focus,
+select.form-control:focus {
+  border-color: #999;
+  box-shadow: none;
+}
+
+/* CHECKBOX */
+.form-check-label {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* BOTÓN */
+button.btn-primary {
+  background-color: #111;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #333;
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding-top: 40px;
+  font-family: "Open Sauce One", sans-serif;
+}
+
+.footer h5 {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer .fab {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.footer .fab:hover {
+  transform: scale(1.1);
+  color: #ffcc00;
+}
